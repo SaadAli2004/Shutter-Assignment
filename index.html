@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        background-color: black;
+      }
+      .container {
+        display: flex;
+        color: white;
+      }
+      /* Side Bar */
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      li {
+        list-style: none;
+      }
+      .sidebar {
+        width: 20%;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        background-color: black;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        text-align: end;
+        align-items: end;
+        font-size: 1.2rem;
+        transform:scale(.9)
+      }
+      .icons {
+        display: flex;
+        gap: 2rem;
+      }
+      /* Gallery */
+      .gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+      }
+      [class^="row"] {
+        display: flex;
+        gap: 1.5rem;
+      }
+      [class^="box"] {
+        width: 380px;
+        height: 380px;
+        background-size:cover;
+        background-position:center;
+        position:relative;
+
+      }
+       [class^="box"]::before{
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        height:100%;
+        width:100%;
+        transition:.3s;
+        opacity:0;
+      }
+      .text{
+     position: relative;
+     text-align: center;
+     top: 55%;
+     transition: .4s;
+     opacity:0;
+      }
+      .row1 .box1,
+      .row2 .box2 {
+        flex-grow: 1;
+      }
+      .row3 .box1,
+      .row3 .box2 {
+        flex-grow: 1;
+      }
+      .footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: black;
+      }
+      .row1 {
+        .box1 {
+          background-image: url(img/r1_box1.avif);
+        }
+        .box2 {
+          background-image: url(img/r1_box2.avif);
+        }
+      }
+      .row2 {
+        .box1 {
+          background-image: url(img/r2_box1.avif);
+        }
+        .box2 {
+          background-image: url(img/r2_box2.avif);
+        }
+        .box3 {
+          background-image: url(img/r2_box3.avif);
+        }
+      }
+      .row3 {
+        .box1 {
+          background-image: url(img/r3_box1.avif);
+        }
+        .box2 {
+          background-image: url(img/r3_box2.avif);
+        }
+      }
+      .line1 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding-bottom: 0.5rem;
+      }
+.line2{
+ font-size:.8rem;
+  font-weight: 400;
+  color:lightgray;
+}
+.footer{
+  padding:3rem;
+}
+     /* Hover effects */
+      a:hover,
+      i:hover {
+        cursor: pointer;
+        color: orangered;
+      }
+      h3:hover{
+        cursor:pointer;
+      }
+      
+      [class^="box"]:hover .text{
+        opacity:1;
+        top:50%;
+      }
+      [class^="box"]:hover::before{
+         cursor:pointer;
+        opacity:1;
+      }
+     
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gallery">
+        <div class="row1">
+
+          <div class="box1">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+          <div class="box2">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="row2">
+
+          <div class="box1">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+          <div class="box2">
+             <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+          <div class="box3">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row3">
+          <div class="box1">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+          <div class="box2">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+            </div>
+          </div>
+        </div>
+        <div class="row1">
+
+          <div class="box1">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+          <div class="box2">
+             <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="row2">
+
+          <div class="box1">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+          <div class="box2">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+          <div class="box3">
+           <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row3">
+
+          <div class="box1">
+            <div class="text">
+              <p class="line1">Photo Titles Here</p>
+              <p class="line2">42 PHOTOS</p>
+
+            </div>
+          </div>
+          <div class="box2">
+            <div class="text">
+            <p class="line1">Photo Titles Here</p>
+            <p class="line2">42 PHOTOS</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <p>
+            Copyright ©2026 All rights reserved | This template is made with
+            <span class="lnr lnr-heart"></span> by <a href="">Saad Ali</a>
+          </p>
+        </div>
+      </div>
+      <div class="sidebar">
+        <h3>SHUTTER</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Photos</a></li>
+          <li><a href="#">Bio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-500px"></i></a>
+          <a href="#"><i class="fab fa-flickr"></i></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
